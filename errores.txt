@@ -1,0 +1,4 @@
+crear un contexto en astro se crea en un archivo jsx y para proveerlo se hace tambien en un archivo jsx 
+y luego ese componente se importa a un archivo .astro
+
+false es igual a 0
