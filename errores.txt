@@ -2,3 +2,8 @@ crear un contexto en astro se crea en un archivo jsx y para proveerlo se hace ta
 y luego ese componente se importa a un archivo .astro
 
 false es igual a 0
+
+
+al elegir la fuente local de las imagenes que se colocan en public se pune directamente la imagen si 
+no hay otra carpte /imgaen.png o si creamos una carpeta en pulic /carpeta/imagen.png 
+porque en astro las imagenes locales las busca por defecto en public

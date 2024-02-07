@@ -2,8 +2,11 @@ import { useContext, useEffect, useState } from "react"
 import { Contexto } from "./contexto"
 import { preguntasConOpciones } from "../data/preguntas"
 import "../estilos/estilos.css"
+import ModalGanador from "./ganador"
+
+
 export default function GenerarPregunta(){
-     const {lenguajes,setLenguajes} = useContext(Contexto)
+     const {lenguajes,setLenguajes,ganador} = useContext(Contexto)
      const [boton,setBoton] = useState(true)
      const [pregunta,setPregunta] = useState(undefined)
      const  [aciertos,setAciertos] = useState(0)
@@ -52,14 +55,28 @@ export default function GenerarPregunta(){
     },[aciertos])
  
 
-return(
-    <div className="w-2/3 flex flex-row items-between h-full">
+return(<>
+     {ganador ?
+     <ModalGanador></ModalGanador> 
+     : undefined
+     }
+    <div className="lg:w-2/3 w-full flex flex-col md:flex-row  h-full gap-3 md:gap-0 p-3 md:px-10 lg:px-0">
+        
+       { pregunta  ? 
+        <div className="h-max m-auto rounded-xl bg-stone-200 bg-opacity-10 px-10 py-3 md:p-3  shadow-w">
+                
+                <img className="md:w-20 w-10" src={`/img/${pregunta.lenguaje}.webp`} alt="" />
+                
+        </div>
+        : undefined
+        }
+       
 
     
      {
        pregunta!==undefined ?  
        
-      <div className=" w-full flex flex-col items-center justify-center">
+      <div className=" w-full flex flex-col items-center justify-center m-0">
         <div className="flex flex-col gap-3 bg-zinc-900 bg-opcity-40  md:w-2/3 w-full text-white rounded-md p-3">
             <h3 className="p-2 font-bold text-xl w-full text-center">{pregunta.p.pregunta}</h3>
             <div className="overflow-auto h-full p-0">
@@ -73,8 +90,8 @@ return(
                               className={`${
                                seleccion[0] === id
                                ? seleccion[1]==true
-                               ? "bg-green-500"
-                               : "bg-red-800"
+                               ? "bg-green-500 hover:bg-green-400"
+                               : "bg-red-800 hover:bg-red-700"
                                : ""
                           } rounded-md p-2 hover:text-zinc-400 hover:bg-zinc-800 cursor-pointer w-full text-center`}
                         onClick={(e) => {
@@ -102,12 +119,12 @@ return(
 }
 { 
         boton ? 
-        <button onClick={handleclick} className="m-auto p-2 text-white p-5 rounded-lg bg-stone-200 bg-opacity-10">
+        <button onClick={handleclick} className="shadow-w hover:opacity-50 hover:scale-110 transition-all m-auto text-white p-5 rounded-lg bg-stone-200 bg-opacity-10">
           Generar pregunta
         </button> : undefined
     }
 
    
        </div>   
-     
+       </>
 )}
