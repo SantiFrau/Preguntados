@@ -11,9 +11,11 @@ export default function GenerarPregunta(){
      const [pregunta,setPregunta] = useState(undefined)
      const  [aciertos,setAciertos] = useState(0)
      const [seleccion , setSeleccion] = useState([-1,undefined])
+     const[titulo,setTitulo] = useState(true)
 
     const handleclick=()=>{
         setSeleccion([-1, undefined])
+        setTitulo(false)
         setBoton(false)
         const lenguajesRestantes = lenguajes.filter((lenguaje)=>{return lenguaje.estado==false})
         const posicionAleatoria = Math.floor(Math.random() * lenguajesRestantes.length);
@@ -117,12 +119,18 @@ return(<>
         : undefined
 
 }
+<div className="m-auto flex flex-col items-center justify-center gap-7">
+{
+    titulo ? <h1 className="text-center font-bold text-3xl"><strong className="text-orange-500">Preguntados </strong><strong className="text-blue-500">Sobre </strong> <strong className="text-yellow-300">Programacion</strong> </h1>
+    : undefined
+}
 { 
         boton ? 
         <button onClick={handleclick} className="shadow-w hover:opacity-50 hover:scale-110 transition-all m-auto text-white p-5 rounded-lg bg-stone-200 bg-opacity-10">
           Generar pregunta
         </button> : undefined
     }
+    </div>
 
    
        </div>   

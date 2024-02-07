@@ -17,7 +17,7 @@ export default function ModalGanador() {
     } transition-opacity transition-transform duration-300`}
   >
       <div className="border border-white flex flex-col items-center justify-center p-3 bg-zinc-900 w-2/3 md:w-1/2 rounded-lg gap-5">
-      <h3 className="text-center text-white font-bold text-xl"><strong className="text-orange-500">Preguntados </strong><strong className="text-blue-500">Sobre </strong> <strong className="text-yellow-300">Programacion</strong> </h3>
+      <h3 className="text-center font-bold text-xl"><strong className="text-orange-500">Preguntados </strong><strong className="text-blue-500">Sobre </strong> <strong className="text-yellow-300">Programacion</strong> </h3>
         <h3 className="text-zinc-300 font-bold text-xl">Has Ganado</h3>
 
         <button
