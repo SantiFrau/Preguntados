@@ -12,7 +12,7 @@ export default function Lenguajes() {
         lenguajes_estilos.map((lenguaje)=>{
           return(
             <div className={`p-3 ${lenguajes[0].estado ? lenguaje.estilo : "bg-opacity-20 bg-stone-200"} rounded-full`}>
-              <img className="w-10" src={lenguaje.img} alt="" />
+              <img className="w-10" src={`${lenguaje.img}`} alt="" />
             </div>
           )
         })
