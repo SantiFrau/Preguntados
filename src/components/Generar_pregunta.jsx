@@ -1,7 +1,10 @@
 import { useContext, useEffect, useState } from "react"
 import { Contexto } from "./contexto"
 import { preguntasConOpciones } from "../data/preguntas"
+<<<<<<< HEAD
 import "../estilos/estilos.css"
+=======
+>>>>>>> 6e915cb6ec378e6477c585216437fab008b4e744
 import ModalGanador from "./ganador"
 import {lenguajes_estilos} from "../data/lenguajes.js";
 
@@ -89,7 +92,11 @@ return(<>
 
                 pregunta.p.opciones.map((opcion,id)=>{
                     return (
+<<<<<<< HEAD
                         <p
+=======
+                        <p key={id}
+>>>>>>> 6e915cb6ec378e6477c585216437fab008b4e744
                               className={`${
                                seleccion[0] === id
                                ? seleccion[1]==true
@@ -97,7 +104,11 @@ return(<>
                                : "bg-red-800 hover:bg-red-700"
                                : ""
                           } rounded-md p-2 hover:text-zinc-400  cursor-pointer w-full text-center`}
+<<<<<<< HEAD
                         onClick={(e) => {
+=======
+                        onClick={() => {
+>>>>>>> 6e915cb6ec378e6477c585216437fab008b4e744
                         handleclick_opcion(opcion, pregunta.p.respuestaCorrecta, id);
                                           }}
                                          >
