@@ -1,5 +1,5 @@
 {
-  "name": "dist",
+  "name": "Preguntados",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -8,7 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy":""
+    "deploy":"gh-pages -d Preguntados"
   },
   "dependencies": {
     "@astrojs/react": "^3.0.9",
