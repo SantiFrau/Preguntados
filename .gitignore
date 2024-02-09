@@ -13,7 +13,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-Preguntados
 
 # environment variables
 .env
@@ -21,5 +20,3 @@ Preguntados
 
 # macOS-specific files
 .DS_Store
-
-errores.txt
