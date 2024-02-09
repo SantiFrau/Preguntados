@@ -3,6 +3,7 @@ import { Contexto } from "./contexto"
 import { preguntasConOpciones } from "../data/preguntas"
 import "../estilos/estilos.css"
 import ModalGanador from "./ganador"
+import {lenguajes_estilos} from "../data/lenguajes.js";
 
 
 export default function GenerarPregunta(){
@@ -67,7 +68,7 @@ return(<>
        { pregunta  ? 
         <div className="h-max m-auto rounded-xl bg-stone-200 bg-opacity-10 px-10 py-3 md:p-3  shadow-w">
                 
-                <img className="md:w-20 w-10" src={`/img/${pregunta.lenguaje}.webp`} alt="" />
+                <img className="md:w-20 w-10" src={lenguajes_estilos[pregunta.lenguaje].img} alt="" />
                 
         </div>
         : undefined
@@ -95,7 +96,7 @@ return(<>
                                ? "bg-green-500 hover:bg-green-400"
                                : "bg-red-800 hover:bg-red-700"
                                : ""
-                          } rounded-md p-2 hover:text-zinc-400 hover:bg-zinc-800 cursor-pointer w-full text-center`}
+                          } rounded-md p-2 hover:text-zinc-400  cursor-pointer w-full text-center`}
                         onClick={(e) => {
                         handleclick_opcion(opcion, pregunta.p.respuestaCorrecta, id);
                                           }}
