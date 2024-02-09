@@ -7,3 +7,12 @@ false es igual a 0
 al elegir la fuente local de las imagenes que se colocan en public se pune directamente la imagen si 
 no hay otra carpte /imgaen.png o si creamos una carpeta en pulic /carpeta/imagen.png 
 porque en astro las imagenes locales las busca por defecto en public
+
+las imganese en astro no agregan el baseurl ej /Preguntados antes que la direccion
+
+npm run build genera una carpeta llamada dist pero si de base le ponemos por ejemplo /Preguntados 
+hay que renombrar la carpeta a Preguntados para que todas las rutas carguen
+
+propiedad name del packguejson afecta a las rutas name:base
+
+base: y name: se sobreescriben 
