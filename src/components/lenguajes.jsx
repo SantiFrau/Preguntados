@@ -14,11 +14,7 @@ export default function Lenguajes() {
       {
         lenguajes_estilos.map((lenguaje,id)=>{
           return(
-<<<<<<< HEAD
             <div className={`p-3 ${lenguajes[id].estado ? lenguaje.estilos : "bg-opacity-20 bg-stone-200"} rounded-full`}>
-=======
-            <div  key={id+10} className={`p-3 ${lenguajes[id].estado ? lenguaje.estilos : "bg-opacity-20 bg-stone-200"} rounded-full`}>
->>>>>>> 6e915cb6ec378e6477c585216437fab008b4e744
               <img className="w-10" src={`${lenguaje.img}`} alt="" />
             </div>
           )

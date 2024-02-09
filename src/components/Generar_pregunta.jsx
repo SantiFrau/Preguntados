@@ -1,10 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import { Contexto } from "./contexto"
 import { preguntasConOpciones } from "../data/preguntas"
-<<<<<<< HEAD
 import "../estilos/estilos.css"
-=======
->>>>>>> 6e915cb6ec378e6477c585216437fab008b4e744
 import ModalGanador from "./ganador"
 import {lenguajes_estilos} from "../data/lenguajes.js";
 
