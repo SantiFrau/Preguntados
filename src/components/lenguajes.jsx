@@ -1,10 +1,6 @@
 import { useContext } from "react";
 import { Contexto } from './contexto.jsx';
 import {lenguajes_estilos} from "../data/lenguajes.js"
-<<<<<<< HEAD
-import "../estilos/estilos.css";
-=======
->>>>>>> 6e915cb6ec378e6477c585216437fab008b4e744
 
 export default function Lenguajes() {
   const { lenguajes } = useContext(Contexto);
@@ -14,7 +10,7 @@ export default function Lenguajes() {
       {
         lenguajes_estilos.map((lenguaje,id)=>{
           return(
-            <div className={`p-3 ${lenguajes[id].estado ? lenguaje.estilos : "bg-opacity-20 bg-stone-200"} rounded-full`}>
+            <div key={id+100} className={`p-3 ${lenguajes[id].estado ? lenguaje.estilos : "bg-opacity-20 bg-stone-200"} rounded-full`}>
               <img className="w-10" src={`${lenguaje.img}`} alt="" />
             </div>
           )
